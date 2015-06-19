@@ -1,0 +1,29 @@
+DROP DATABASE IF EXISTS forum;
+CREATE DATABASE forum;
+\c forum
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS topics;
+
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  email VARCHAR NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  password VARCHAR NOT NULL
+);
+
+CREATE TABLE topics (
+	id SERIAL PRIMARY KEY,
+	topic VARCHAR NOT NULL,
+	comments_number INTEGER NOT NULL,
+	created_at TIMESTAMP NOT NULL
+);
+
+CREATE TABLE comments (
+	topics_id INTEGER NOT NULL REFERENCES topics(id),
+	message VARCHAR NOT NULL,
+	created_at TIMESTAMP NOT NULL
+);
+

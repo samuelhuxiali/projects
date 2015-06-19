@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tweeter</title>
+  <link rel="stylesheet" href="/css/forum.css">
+</head>
+<body>
+	<header>
+		<big>Forum</big>
+	</header>
+
+  <% if current_user %>
+    You are Logged In
+    <form action="/users/login" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Log Out">
+    </form>
+  <% else %>
+    You are Not Logged In
+  <% end %>
+
+	<%= yield %>
+
+	<footer>
+		<ul>
+			<li><a href="/topics">Topics</a></li>
+			<li><a href="/users">Users</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
