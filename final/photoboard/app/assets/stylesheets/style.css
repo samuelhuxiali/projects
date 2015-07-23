@@ -11,6 +11,7 @@ img {
 
 h2 {
 	text-align: center;
+  font-size: 20px;
 }
 
 h3 {
@@ -25,7 +26,7 @@ hr {
 	margin-right: 10px;
 }
 
-.div-pictures {
+#div-pictures {
 	position: relative;
 	background-color: white;
 	padding: 30px;
@@ -368,3 +369,4 @@ hr {
 * html #menu-bar {
   height: 1%;
 }
+
