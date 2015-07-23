@@ -1,0 +1,11 @@
+
+<div>
+	<% @pictures.each do |picture| %>
+	<div class="div-pictures">
+	  <a href="/pictures/<%= picture.id %>">
+	  	<%= image_tag picture.image.url %>
+	  </a>
+	  <h2><%= picture.title %></h2>
+	</div>
+	<% end %>
+</div>

@@ -1,0 +1,8 @@
+<%= form_for @picture do |form| %>
+	<div class="new-pic-div">
+	  <%= render form %>
+	  <div class="actions">
+	    <%= form.submit 'Create Picture!' %>
+	  </div>
+	</div>
+<% end %>
