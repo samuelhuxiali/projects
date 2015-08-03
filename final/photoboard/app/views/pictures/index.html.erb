@@ -1,0 +1,11 @@
+
+<div id="masonry-container" class="transitions-enabled">
+	<% @pictures.each do |picture| %>
+	<div class="box" id="div-pictures">
+	  <a href="/pictures/<%= picture.id %>">
+	  	<%= image_tag picture.image.url %>
+	  </a>
+	  <h2><%= picture.title %></h2>
+	</div>
+	<% end %>
+</div>

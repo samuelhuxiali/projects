@@ -1,0 +1,17 @@
+<div class='form-div'>
+	<div class='field'>
+	  <%= form.label :Picture %><br>
+	  <%= form.file_field :image %>
+	  <hr>
+	</div>
+	<div class='field'>
+	  <%= form.label :title %><br>
+	  <%= form.text_field :title, :id => 'title' %>
+	  <hr>
+	</div>
+	<div class='field'>
+	  <%= form.label :description %><br>
+	  <%= form.text_area :description, :id => 'description' %>
+
+	</div>
+</div>

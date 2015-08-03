@@ -1,0 +1,17 @@
+<div class="one-picture-div">
+	<%= image_tag @picture.image.url %>
+	<h2><%= @picture.title %></h2>
+	<hr class="hr-for-heady">
+	<p><%= @picture.description%></p>
+	<%= link_to "Edit", edit_picture_path %>
+	<%= link_to "Back to Board", pictures_path %>
+
+	<div id="comments">
+		<hr class="hr-for-heady">
+		<h2><%= @picture.comments.count %> Comments </h2>
+		<%= render @picture.comments %>
+		<hr class="hr-for-heady">
+		<h3>Add a comment:</h3>
+		<%= render "comments/form" %>
+	</div>
+</div>
